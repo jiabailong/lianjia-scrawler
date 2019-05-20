@@ -1,8 +1,10 @@
-DBENGINE = 'mysql'  # ENGINE OPTIONS: mysql, sqlite3, postgresql
-DBNAME = 'ershoufang'
-DBUSER = 'root'
-DBPASSWORD = ''
-DBHOST = '127.0.0.1'
-DBPORT = 3306
-CITY = 'bj'  # only one, shanghai=sh shenzhen=sh......
-REGIONLIST = [u'dongcheng']  # only pinyin support
+import os
+
+DBENGINE = os.getenv('DNENGINE', 'sqlite3')  # ENGINE OPTIONS: mysql, sqlite3, postgresql
+DBNAME = os.getenv('DBNAME','lianjia.sqlite3')
+DBUSER = os.getenv('DBUSER','root')
+DBPASSWORD = os.getenv('DBPASSWORD','')
+DBHOST = os.getenv('DBHOST','127.0.0.1')
+DBPORT = os.getenv('DBPORT', 3306)
+CITY = os.getenv('CITY','lf')  # only one, shanghai=sh shenzhen=sh......
+REGIONLIST = os.getenv("REGIONLIST").split(",")  # only pinyin support
