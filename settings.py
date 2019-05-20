@@ -1,6 +1,6 @@
 import os
 
-DBENGINE = os.getenv('DNENGINE', 'sqlite3')  # ENGINE OPTIONS: mysql, sqlite3, postgresql
+DBENGINE = os.getenv('DBENGINE', 'sqlite3')  # ENGINE OPTIONS: mysql, sqlite3, postgresql
 DBNAME = os.getenv('DBNAME','lianjia.sqlite3')
 DBUSER = os.getenv('DBUSER','root')
 DBPASSWORD = os.getenv('DBPASSWORD','')
