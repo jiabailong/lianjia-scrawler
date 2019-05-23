@@ -15,7 +15,7 @@ if __name__ == "__main__":
     city = settings.CITY
     model.database_init()
     # Init,scrapy celllist and insert database; could run only 1st time
-    if os.getenv('INIT_COMMUNITY', False) == True:
+    if os.getenv('INIT_COMMUNITY', 'False') == 'True':
         core.GetCommunityByRegionlist(city, regionlist)
     core.GetHouseByRegionlist(city, regionlist)
     core.GetRentByRegionlist(city, regionlist)
