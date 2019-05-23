@@ -1,7 +1,7 @@
 import core
 import model
 import settings
-
+import os
 
 def get_communitylist(city):
     res = []
