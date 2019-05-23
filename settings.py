@@ -7,4 +7,4 @@ DBPASSWORD = os.getenv('DBPASSWORD','')
 DBHOST = os.getenv('DBHOST','127.0.0.1')
 DBPORT = os.getenv('DBPORT', 3306)
 CITY = os.getenv('CITY','lf')  # only one, shanghai=sh shenzhen=sh......
-REGIONLIST = os.getenv("REGIONLIST").split(",")  # only pinyin support
+REGIONLIST = (os.getenv("REGIONLIST") or "yanjiao").split(",")  # only pinyin support
